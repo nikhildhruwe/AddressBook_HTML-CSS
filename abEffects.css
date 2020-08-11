@@ -1,18 +1,22 @@
-/* .inputField{
-font-family: 'Roboto Mono', monospace;
-      display: inline-block;
-      width: 12%;
-      height: 1.2rem;
-      border-width: 1;
-      color: rgba(0, 0, 0, 0.411);
-      font-size: 11px;
-} */
+.Container
+{
+    margin-bottom: 1.5%;
+}
 
 .inputField
 {
-    width: 40%;
+    width: 34%;
     height: 1.8rem;
-    max-width: 20%;
+    margin-top: 5px;
+    border-width: 1px;
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255);
+}
+
+.inputNameField
+{
+    width: 90%;
+    height: 1.8rem;
     margin-top: 5px;
     border-width: 1px;
     border-radius: 20px;
@@ -21,11 +25,11 @@ font-family: 'Roboto Mono', monospace;
 
 .addressField
 {
-    width: 41%;
+    width: 34%;
     height: 1.8rem;
     margin-top: 5px;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color:rgb(252, 252, 252);
 }
 
@@ -33,18 +37,19 @@ body
 {
     margin-top: 5%;
     margin-left: 40%;
-    background: url(pexels.jpeg) ;
+    background: url(Bright-Blue1.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 h1
 {
-    color: rgb(255, 75, 75) ;
+    color: rgb(219, 16, 16) ;
 }
 
 .saveButton
 {   margin-left: 5px;
+    width: 10%;
     border-radius: 20px;
     background-color: rgb(253, 199, 117);
 }

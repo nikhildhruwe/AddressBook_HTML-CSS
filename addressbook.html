@@ -4,22 +4,82 @@
         <title>Address Book Management</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./abEffects.css">
+        <link rel="stylesheet" type="text/css" href="./abEffects.css" >
     </head>
     <body>
         <h1>Address Book</h1>
-        <form>  
-            <div class="inpDiv">
-                <input type="first_name" class="inputField" name="first_name" placeholder="First Name" required=""/>
-                <input type="last_name" class="inputField" name="last_name" placeholder="Last Name" required=""/><br><br>
-                <input type="Address" class="addressField"  name="Address" placeholder="Address" required=""/><br><br>
-                <input type="state" class="inputField" name="state" placeholder="State" required=""/><br><br>
-                <input type="city" class="inputField" name="city" placeholder="City" required=""/><br><br>
-                <input type="zip"  class="inputField" name="zip" placeholder="Zip" required=""/> <br><br>
-                <input type="phone_no"  class="inputField" name="phone_no" placeholder="Phone Number" required=""/><br><br>
-                <input type="submit"  class="saveButton" value="Save Details"/><br><br>
-            </div><br>
-            </form>
-          </div>
+        <form action="#">  
+            <div class="Container" style="display: flex; flex-direction: row;">
+                <div>
+                    <input type="text" pattern = "^[A-Z][a-z]{2,}$" title="ex: Nikhil" onblur="validateFirstName(this.value)" name="fname" id="fname" class="inputNameField"  placeholder="First Name" required=""/>
+                    <span id="warnFname"></span>
+                </div>
+                <div>
+                    <input type="text" pattern = "^[A-Z][a-z]{2,}$" title="ex: Dhruwe" onblur="validateLastName(this.value)" name="lname" id="lname" class="inputNameField" placeholder="Last Name" required=""/>
+                    <span id="warnLname"></span>
+                </div>
+            </div>
+             <div class="Container ">
+                <textarea rows="3" class="addressField" placeholder="Address" required=""></textarea>
+            </div>
+            <div class="Container">
+                <div>
+                    <input type="text" pattern = "^[A-Z]{1}[A-Za-z]{1,}" title="ex: Hyderabad" onblur="validateCity(this.value)" name = "city" id = "city " class="inputField" placeholder="City" required=""/>
+                    <span id="warnCity"></span>    
+                </div>
+            </div>
+            <div class="Container">
+                <input type="text" pattern= "^[0-9]{6}" title="ex: 500012" onblur="validateZip(this.value)" name = "zip" id = "zip"  class="inputField" placeholder="Zip" required=""/>
+                <span id="warnZip"></span>    
+                </div>
+            <div class="Container">
+                <input type="text" pattern= "^[1-9][0-9]{9}$" title="ex: 9988776655" onblur="validatePhone(this.value)" name = "phone" id = "phone" class="inputField" placeholder="Phone Number" required=""/>
+                <span id="warnPhone"></span>    
+                </div>
+                <div class="Container">
+                    <select id="state" class="inputField" required>
+                        <option disabled selected>Select State</option>
+                        <option>Andaman and Nicobar Islands</option>
+                        <option>Andra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chandigarh</option>
+                        <option>Chattisgarh</option>
+                        <option>Dadra and Nagar Haveli</option>
+                        <option>Daman and Diu</option>
+                        <option>Delhi</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Lakshadweep Islands</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Pondicherry</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                    </select>
+                </div><br>
+            <input type="submit"  class="saveButton" value="Save Details"/><br><br>
+       </div>
+     </form>
     </body>
 </html>
+<script src = "./validateInput.js"> </script>
